@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+RUN apt-get -y install
 RUN apt-get -y update
 RUN apt-get install - nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
