@@ -4,4 +4,3 @@ RUN yum install -y epel-release && yum install -y nginx
 RUN yum clean all
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 CMD [ "nginx" ]
-RUN -d -p 80:80 nginx
