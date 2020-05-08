@@ -1,6 +1,7 @@
  FROM ubuntu:18.04
  RUN apt-get -y update
  RUN apt-get install -y nginx
+ COPY ./scr /usr/share/nginx/html
  RUN echo "daemon off;" >> /etc/nginx/nginx.conf
  RUN sed -i "0,/nginx/s/nginx/docker-nginx/i" /usr/share/nginx/html/index.html
  CMD [ "nginx" ]
